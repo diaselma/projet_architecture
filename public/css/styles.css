@@ -3,19 +3,17 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: url('https://i0.wp.com/esp.sn/wp-content/uploads/2020/05/esp-1.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
-
-
 
 a:hover {
   color: #bcbcbc;
   transition: 0.3s;
-  
 }
 
 header {
-  background: #14cc54;
+  background: #1D2769; /* Solid background without transparency */
   color: #fff;
   padding: 10px 0;
   text-align: center;
@@ -24,6 +22,7 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .home {
@@ -35,18 +34,20 @@ nav {
 .home a {
   color: #fff;
   text-decoration: none;
-
 }
 
 nav ul {
   padding: 0;
   list-style: none;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul li {
   display: inline;
-  /* margin: 0 10px; */
+  margin: 0 10px;
 }
 
 nav ul li a {
@@ -64,6 +65,9 @@ nav ul li a.active, .home a.active {
 main {
   padding: 20px;
   min-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: transparent; /* Transparent background to show the image behind */
 }
 
 .articles article {
@@ -74,6 +78,93 @@ main {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Footer */
 footer {
+  background-color: #1D2769;
+  color: #fff;
+  padding: 40px 0;
   text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 300px; /* Ajuster la largeur des sections selon vos besoins */
+  margin: 10px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  color: #fff;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #bcbcbc;
+}
+
+
+
+
+/* Styles spécifiques pour la page d'accueil */
+h1, h2 {
+ 
+  text-align: center; /* Centrer le texte */
+}
+
+
+
+.articles {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.articles article {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.articles article h2 {
+  font-size: 1.5em;
+  color: #1D2769;
+  margin-bottom: 10px;
+}
+
+.articles article p {
+  line-height: 1.6;
+}
+
+.articles article small {
+  display: block;
+  margin-top: 10px;
+  color: #888;
+}
+
+.articles article p:first-of-type {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.articles article:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
 }

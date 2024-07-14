@@ -14,7 +14,7 @@
             </article>
         <?php endforeach; ?>
     <?php else: ?>
-        <p> Aucun article trouvé.</p>
+        <h2> Aucun article trouvé.</h2>
     <?php endif; ?>
 </div>
 
